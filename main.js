@@ -1,8 +1,7 @@
-    //client(ekran),page(strona),screen(monitor)
-const hTwoEvent = document.querySelector('h2');
+    //.clientX(ekran),.pageY(strona),.screenX(monitor)
 document.body.addEventListener('mousemove', (event) => {
-    hTwoEvent.textContent = `${event.clientX}, ${event.clientY}`;
-    // console.log(event.pageX, event.pageY);
-    // console.log(event.screenX, event.screenY);
+    document.querySelector('h2').textContent = `${event.clientX}, ${event.clientY}`;
+    document.body.style.backgroundColor = `rgb(${event.clientX/3},
+    ${event.clientY/2.5}, ${event.clientY/event.clientX * 10})`;
 })
 
