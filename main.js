@@ -1,5 +1,5 @@
     //.clientX(ekran),.pageY(strona),.screenX(monitor)
-document.body.addEventListener('mousemove', (event) => {
+    document.body.addEventListener('mousemove', (event) => {
     const hTwoOutput = document.querySelector('h2');
     const x = event.clientX;
     const y = event.clientY;
@@ -17,4 +17,7 @@ document.body.addEventListener('mousemove', (event) => {
     ${secondColor}%, ${thirdColor}%)`;
 
 })
+
+
+
 
