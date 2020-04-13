@@ -9,14 +9,18 @@ let flag = true;
 
 
 function plusI() {
-    i+=5;
-    console.log(`rgb(${red=i}, ${green=i}, ${blue=i})`);
-    document.body.style.backgroundColor= `rgb(${red=i}, ${green=i}, ${blue=i})`;
+    if(i < 255){
+        i+=5;
+        console.log(`rgb(${red=i}, ${green=i}, ${blue=i})`);
+        document.body.style.backgroundColor= `rgb(${red=i}, ${green=i}, ${blue=i})`;
+    }
 }
 function minusI() {
-    i-=5;
-    console.log(`rgb(${red=i}, ${green=i}, ${blue=i})`);
-    document.body.style.backgroundColor= `rgb(${red=i}, ${green=i}, ${blue=i})`;
+    if(i>0){
+        i-=5;
+        console.log(`rgb(${red=i}, ${green=i}, ${blue=i})`);
+        document.body.style.backgroundColor= `rgb(${red=i}, ${green=i}, ${blue=i})`;
+    }
 }
 
 
@@ -24,19 +28,31 @@ function minusI() {
 
 
 const changeColor = function(){
-  if(flag == true){
     if(event.keyCode == 38){
         plusI();
     }else if(event.keyCode == 40){
         minusI();
     }
-   }
-   if(i >= 255 || i == 0){
-    flag = false;
-   }
 }
 
 
 
-document.body.style.backgroundColor= `rgb(${red+=1}, ${green+=1}, ${blue+=1})`;
-window.addEventListener('keydown', changeColor);
+
+
+
+
+const changeColorTwo = function(){
+    switch(event.keyCode){
+        case 38:
+            plusI();
+            break;
+        case 40:
+            minusI();
+            break;
+    }
+  }
+
+
+
+document.body.style.backgroundColor= `rgb(${red}, ${green}, ${blue})`;
+window.addEventListener('keydown', changeColorTwo);
