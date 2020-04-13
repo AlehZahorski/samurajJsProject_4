@@ -1,19 +1,11 @@
 const square = document.body.querySelector('div');
 square.style.cursor="pointer";
 let flag = true;
-// let xDiv;
-// let yDiv;
+
 
 square.addEventListener('mousedown', () =>{
     console.log('dziala mousedown');
     square.style.backgroundColor="gray";
-     
-    // xDiv = event.offsetX;
-    // yDiv = event.offsetY;
-    // console.log(event.offsetX, event.offsetY)
-
-
-
 
     document.body.addEventListener('mousemove', function asd() {
         if(flag == true){
